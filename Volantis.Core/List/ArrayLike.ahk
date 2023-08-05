@@ -1,0 +1,3 @@
+class ArrayLike extends ListBase {
+
+}

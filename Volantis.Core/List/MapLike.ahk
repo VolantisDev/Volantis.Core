@@ -1,0 +1,3 @@
+class MapLike extends ListBase {
+
+}
