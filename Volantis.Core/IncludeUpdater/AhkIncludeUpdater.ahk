@@ -1,6 +1,6 @@
 class AhkIncludeUpdater extends IncludeUpdaterBase {
     mainFilePattern := ""
-    testFilePattern := "*.test.ahk"
+    testFilePattern := ".test.ahk"
     includeFilename := "Includes.ahk"
     testIncludeFilename := "Includes.test.ahk"
 
@@ -8,6 +8,10 @@ class AhkIncludeUpdater extends IncludeUpdaterBase {
         includePattern := testBuilder ?
             this.testFilePattern :
             this.mainFilePattern
+
+        if (includePattern) {
+            includePattern := "*" . includePattern
+        }
 
         excludePatterns := [
             libDir . "\" . this.includeFilename,
@@ -23,8 +27,8 @@ class AhkIncludeUpdater extends IncludeUpdaterBase {
 
     GetIncludeWriter(libDir, testWriter := false) {
         includePath := testWriter ?
-            libDir . "\Includes.ahk" :
-            libDir . "\Includes.test.ahk"
+            libDir . "\" . this.testIncludeFilename :
+            libDir . "\" . this.includeFilename
 
         return AhkIncludeWriter(includePath)
     }

@@ -19,24 +19,17 @@ class IncludeUpdaterBase {
         libsUpdated := false
 
         Loop Files this.appDir . "\" . this.mainLibDir . "\*", "D" {
-            libUpdated := this.GenerateIncludeFile(A_LoopFileFullPath)
+            libUpdated := this.GenerateIncludeFile(A_LoopFileFullPath, true)
 
             if (libUpdated) {
                 libsUpdated := true
             }
         }
 
-        if (libsUpdated) {
-            MsgBox("Libraries have changed. Please restart or rebuild the application.")
-        }
-
         return libsUpdated
     }
 
     GenerateIncludeFile(libDir, includeTests := false) {
-        filePath := libDir . "\Includes.ahk"
-        testsPath := libDir . "\Includes.test.ahk"
-
         includeBuilder := this.GetIncludeBuilder(libDir, false)
         includeWriter := this.GetIncludeWriter(libDir, false)
         updated := includeWriter.WriteIncludes(includeBuilder.BuildIncludes())
