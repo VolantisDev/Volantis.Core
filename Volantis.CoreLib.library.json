@@ -4,6 +4,5 @@
     "description": "A core library containing classes used throughout all other Volantis libraries.",
     "developer": "Volantis Development",
     "website": "https://volantis.dev",
-    "dependencies": [],
-    "devDependencies": []
+    "dependencies": []
 }
