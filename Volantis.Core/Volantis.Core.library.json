@@ -1,8 +1,0 @@
-{
-    "name": "Volantis.Core",
-    "type": "shared",
-    "description": "A library containing core functionality used by all other libraries.",
-    "developer": "Volantis Development",
-    "website": "https://volantis.dev",
-    "dependencies": []
-}

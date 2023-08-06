@@ -12,6 +12,9 @@
     ],
     "dependencies": {},
     "libraries": {
-        "Volantis.Core": "Volantis.Core"
+        "Volantis.Core": {
+            "path": "lib/Volantis.Core",
+            "uses": []
+        }
     }
 }
