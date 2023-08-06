@@ -1,0 +1,17 @@
+{
+    "name": "Volantis.Core",
+    "type": "package",
+    "description": "A core library containing classes used throughout all other Volantis libraries.",
+    "developer": "Volantis Development",
+    "website": "https://volantis.dev",
+    "authors": [
+        {
+            "name": "Ben McClure",
+            "email": "ben@volantisdev.com"
+        }
+    ],
+    "dependencies": {},
+    "libraries": {
+        "Volantis.Core": "Volantis.Core"
+    }
+}
